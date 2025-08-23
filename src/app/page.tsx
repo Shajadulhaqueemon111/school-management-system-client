@@ -1,9 +1,7 @@
-import AllRoute from "./components/AllRoute/AllRoute";
-
 export default function Home() {
   return (
-    <div>
-      <AllRoute />
+    <div className="text-center">
+      <h1>home page </h1>
     </div>
   );
 }
