@@ -6,11 +6,11 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [extraOpen, setExtraOpen] = useState(false);
   return (
-    <nav className="bg-base-100 shadow-sm fixed w-full z-50">
+    <nav className="bg-base-100 shadow-sm fixed w-full z-30 h-16 top: 0">
       <div className=" mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Navbar Start */}
-          <div className="flex items-center">
+          <div>
             <Link href="/" className="text-xl font-bold btn btn-ghost">
               School Manage
             </Link>
@@ -54,7 +54,7 @@ export default function Navbar() {
               Home
             </Link>
             <Link
-              href="/notice-board"
+              href="/noticeboard"
               className="px-3 py-2 rounded-md hover:bg-gray-200"
             >
               Notice-Board
@@ -66,29 +66,34 @@ export default function Navbar() {
               >
                 Extra Feature
               </button>
+
               {extraOpen && (
                 <div className="absolute top-full left-0 bg-white shadow-lg rounded-md mt-2 w-40 z-50">
                   <Link
                     href="/calendar"
                     className="block px-4 py-2 hover:bg-gray-100"
+                    onClick={() => setExtraOpen(false)} // ✅ click করলে menu বন্ধ হবে
                   >
                     Calendar
                   </Link>
                   <Link
                     href="/library"
                     className="block px-4 py-2 hover:bg-gray-100"
+                    onClick={() => setExtraOpen(false)}
                   >
                     Library
                   </Link>
                   <Link
                     href="/transport"
                     className="block px-4 py-2 hover:bg-gray-100"
+                    onClick={() => setExtraOpen(false)}
                   >
                     Transport
                   </Link>
                 </div>
               )}
             </div>
+
             <Link
               href="/contact"
               className="px-3 py-2 rounded-md hover:bg-gray-200"
@@ -96,7 +101,7 @@ export default function Navbar() {
               Contact
             </Link>
             <Link
-              href="/about"
+              href="/aboute"
               className="px-3 py-2 rounded-md hover:bg-gray-200"
             >
               About

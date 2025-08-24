@@ -4,7 +4,7 @@ import Navbar from "../Navbar";
 const AllRoute = () => {
   return (
     <div>
-      <div className="mx-auto items-center">
+      <div>
         <Navbar />
       </div>
     </div>
